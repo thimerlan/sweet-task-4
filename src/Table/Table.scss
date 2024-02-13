@@ -1,0 +1,104 @@
+.table-container {
+  .toolbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    margin-top: 10px;
+    button {
+      margin: 0px 5px;
+      font-size: 20px;
+      font-family: "Poppins";
+      padding: 4px 4px 0px 4px;
+      background-color: rgba(157, 120, 69, 0.21);
+      outline: none;
+      border: none;
+      border-radius: 1ex;
+      color: rgb(62, 191, 255);
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s all ease;
+
+      &:hover {
+        background-color: #625555;
+        transform: scale(1.09);
+      }
+
+      &:disabled {
+        background-color: #e11b1bdc;
+        color: #333333;
+        cursor: not-allowed;
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  .table {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 1100px;
+    border-collapse: collapse;
+    font-family: "Poppins";
+
+    th,
+    td {
+      border: 1px solid #dddddd;
+      padding: 12px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+      color: #333333;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: #333333;
+        color: #fefe;
+      }
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr {
+      background-color: #f1f1f1;
+    }
+  }
+
+  td {
+    transition: all 0.2s ease;
+    font-weight: 500;
+    font-size: 17px;
+
+    &:hover {
+      background-color: #ff720ee5;
+    }
+
+    &.status-active {
+      background-color: #008000;
+      color: #fff;
+    }
+
+    &.status-blocked {
+      background-color: #ff0000;
+      color: #fff;
+    }
+
+    &.even-row {
+      background-color: #f9f9f9;
+    }
+
+    &.odd-row {
+      background-color: #f1f1f1;
+    }
+  }
+}
+tbody {
+  tr.userIsBlocked {
+    background-color: #bb232338 !important;
+    color: #fde3e3;
+  }
+}
